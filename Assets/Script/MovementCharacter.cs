@@ -8,12 +8,11 @@ public class MovementCharacter : MonoBehaviour
     private Joystick leftJoystick;
     [SerializeField]
     private float speed;
+    [SerializeField]
+    private GameObject sol;
 
-    private void Update()
+    private void FixedUpdate()
     {
-        var rigidbody = GetComponent<Rigidbody>();
-        rigidbody.velocity = new Vector3(leftJoystick.Horizontal * speed,
-                                         0.0f,
-                                         leftJoystick.Vertical * speed);
+        transform.localPosition += new Vector3(leftJoystick.Horizontal * speed, transform.localPosition.y, leftJoystick.Vertical * speed);
     }
 }
