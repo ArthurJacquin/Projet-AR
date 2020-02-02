@@ -712,6 +712,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1871083555863054669, guid: ea69de5e10ae96144b03f55c4fd77619,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7052835
+      objectReference: {fileID: 0}
     - target: {fileID: 1890889737974109293, guid: ea69de5e10ae96144b03f55c4fd77619,
         type: 3}
       propertyPath: m_Range
@@ -1031,6 +1036,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878002296241853152, guid: ea69de5e10ae96144b03f55c4fd77619,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.85
       objectReference: {fileID: 0}
     - target: {fileID: 7960127391907663971, guid: ea69de5e10ae96144b03f55c4fd77619,
         type: 3}
@@ -1452,7 +1462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &778013984
 Transform:
   m_ObjectHideFlags: 0
