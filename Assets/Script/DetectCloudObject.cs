@@ -57,7 +57,5 @@ public class DetectCloudObject : MonoBehaviour
             objectFull.transform.position = Vector3.Lerp(finalPosition.position, character.transform.position, time);
             objectFull.transform.rotation = Quaternion.Slerp(finalPosition.rotation, character.transform.rotation, time);
         }
-
     }
-
 }

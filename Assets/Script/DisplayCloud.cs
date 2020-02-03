@@ -5,10 +5,12 @@ using UnityEngine;
 public class DisplayCloud : MonoBehaviour
 {
     [SerializeField] private GameObject cloudButton;
+    [SerializeField] private string objectToFind;
 
     private void OnTriggerEnter(Collider other)
     {
         cloudButton.SetActive(true);
+
     }
 
     private void OnTriggerExit(Collider other)

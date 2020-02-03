@@ -28,12 +28,15 @@ public class CharacterMovement : MonoBehaviour
     {
         horizontalInput = leftJoystick.Horizontal;
         verticalInput = leftJoystick.Vertical;
+
         moveDirForward = transform.forward * verticalInput;
         moveDirSide = transform.right * horizontalInput;
         moveDir += (moveDirForward + moveDirSide).normalized;
+
         dis = moveDir * speed * Time.deltaTime;
+
         if (Ddebug) Debug.Log(moveDir);
+
         controller.Move(dis);
-        
     }
 }
