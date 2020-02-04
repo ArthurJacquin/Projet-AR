@@ -8,43 +8,56 @@ public class DetectCloudObject : MonoBehaviour
     [SerializeField] private GameObject UseButton;
     [SerializeField] private GameObject CloudButton;
     [SerializeField] private GameObject character;
-    [SerializeField] private GameObject objectFull;
-    [SerializeField] private GameObject objectCloud;
+    [SerializeField] private GameObject cloud;
 
-    [SerializeField] private float scale;
-    [SerializeField] private float time;
-    [SerializeField] private Transform finalPosition;
+    private GameObject objectCloud;
+    private GameObject objectFull;
+    private Collider colliderTriggered;
 
-    public bool click = false;
-    public Text debug;
+    private TriggerManager triggerManager;
+
+    private float scale = 0.1f;
+    private float time = 100f;
+
+    private void Start()
+    {
+        triggerManager = TriggerManager.instance;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         CloudButton.SetActive(false);
         UseButton.SetActive(true);
 
-        debug.text = "trouvé";
-        Debug.Log(other.gameObject.name + " trouvé !");
+        colliderTriggered = other;
     }
 
     private void OnTriggerExit(Collider other)
     {
         CloudButton.SetActive(false);
         UseButton.SetActive(false);
-        click = false;
 
-        debug.text = "Sortie";
-        Debug.Log(other.gameObject.name + " sortie !");
+        colliderTriggered = null;
     }
 
+    public void UseObject()
+    {
+        objectCloud = colliderTriggered.gameObject;
+        objectFull = triggerManager.triggerInCloudToObjectFull[colliderTriggered];
+
+        cloud.SetActive(false);
+        objectFull.SetActive(true);
+
+        setObjectOnCharacter();
+    }
+
+    //Lerp the full object to the trap or the character
     public void setObjectOnCharacter()
     {
-        click = true;
-        objectCloud.SetActive(false);
-
-        objectFull.SetActive(true);
         Vector3 positionObjectFull = objectFull.transform.position;
+        Trap currentTrap = triggerManager.traps[triggerManager.triggerToTrapIndex[colliderTriggered.gameObject]];
 
+        //Move the object to the target transform
         if (objectCloud.tag == "Fruit")
         {
             objectFull.transform.localScale = new Vector3(scale, scale, scale);
@@ -53,9 +66,41 @@ public class DetectCloudObject : MonoBehaviour
         }
         else
         {
-            objectFull.transform.localScale = finalPosition.localScale;
-            objectFull.transform.position = Vector3.Lerp(finalPosition.position, character.transform.position, time);
-            objectFull.transform.rotation = Quaternion.Slerp(finalPosition.rotation, character.transform.rotation, time);
+            Transform FinalPos = currentTrap.objectPos;
+
+            objectFull.transform.localScale = FinalPos.localScale;
+            objectFull.transform.position = Vector3.Lerp(FinalPos.position, character.transform.position, time);
+            objectFull.transform.rotation = Quaternion.Slerp(FinalPos.rotation, character.transform.rotation, time);
+        }
+
+        StartCoroutine(objectAction(currentTrap));
+    }
+
+    //Do the action of the object
+    IEnumerator objectAction(Trap trap)
+    {
+        yield return new WaitForSeconds(time);
+
+        if (objectCloud.tag == "Fruit")
+        {
+            //TODO : heal player
+        }
+        else
+        {
+            switch (trap.type)
+            {
+                case TrapType.Destroy:
+                    trap.trapObject.SetActive(false);
+                    break;
+
+                case TrapType.Open:
+                    //TODO : Open
+                    break;
+
+                case TrapType.Place:
+                    //TODO : désactiver les dégats du piège
+                    break;
+            }
         }
     }
 }

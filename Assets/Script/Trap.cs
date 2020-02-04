@@ -11,8 +11,9 @@ public enum TrapType
 
 public class Trap : MonoBehaviour
 {
-    public BoxCollider trigger;
+    public GameObject trigger;
     public Transform objectPos;
-    public Transform solvingObject;
+    public GameObject solvingObject;
+    public GameObject trapObject;
     public TrapType type;
 }
