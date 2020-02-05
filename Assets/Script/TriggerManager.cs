@@ -31,7 +31,13 @@ public class TriggerManager : MonoBehaviour
             instance = this;
         }
 
-        for(int i = 0; i < trigger.Length; i++)
+        triggerInCloudToObjectFull = new Dictionary<Collider, GameObject>();
+        triggerToTrapIndex = new Dictionary<GameObject, int>();
+    }
+
+    private void Start()
+    {
+        for (int i = 0; i < trigger.Length; i++)
         {
             Trap t = new Trap();
             t.trigger = trigger[i];
@@ -44,7 +50,7 @@ public class TriggerManager : MonoBehaviour
             triggerToTrapIndex.Add(trigger[i], i);
         }
 
-        for(int i = 0; i < triggersInCloud.Length; i++)
+        for (int i = 0; i < triggersInCloud.Length; i++)
         {
             triggerInCloudToObjectFull.Add(triggersInCloud[i], objects[i]);
         }
