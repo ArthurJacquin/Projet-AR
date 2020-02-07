@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterMovement : MonoBehaviour
+public class CharacterManager : MonoBehaviour
 {
+    public GameObject player;
+    private Vector3 playerInitialPosition;
+    
+    //Mouvement parameters
     [SerializeField]
     private Joystick leftJoystick;
     [SerializeField]
@@ -21,6 +25,7 @@ public class CharacterMovement : MonoBehaviour
     private void Awake()
     {
         moveDir = Vector3.zero;
+        playerInitialPosition = player.transform.position;
     }
 
     void FixedUpdate()
