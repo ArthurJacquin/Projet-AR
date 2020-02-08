@@ -117,35 +117,38 @@ public class DetectCloudObject : MonoBehaviour
 
         if (objectCloud.tag == "Fruit")
         {
-            if(life.lifeState < 4)
-            {
-                life.lifeState++;
-            }
+            life.gainLife();
+            Destroy(objectFull);
         }
         else
         {
-            if(objectFull.name.Contains(trap.solvingObject.name))
+            if(objectFull.name.Contains(trap.solvingObject.name)) //Si c'est le bon objet
             {
-                Debug.Log("Bon objet");
                 switch (trap.type)
                 {
                     case TrapType.Destroy:
                         trap.trapObject.SetActive(false);
+                        Destroy(objectFull);
                         break;
 
                     case TrapType.Open:
-                        //TODO : Open
+                        trap.trapObject.transform.Rotate(Vector3.up, 90f);
+                        Destroy(objectFull);
                         break;
 
                     case TrapType.Place:
-                        //TODO : désactiver les dégats du piège
+                        trap.trapObject.GetComponent<BoxCollider>().enabled = false;
                         break;
                 }
+
+                //Désactive le trigger du piège
+                triggeredTrap.enabled = false;
             }
             else
             {
                 //Perdre des hp
-                Debug.Log("loose hp");
+                life.looseLife();
+                Destroy(objectFull);
             }
         }
     }
