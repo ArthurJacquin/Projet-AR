@@ -58,7 +58,8 @@ public class DetectCloudObject : MonoBehaviour
     public void UseObject()
     {
         objectCloud = colliderTriggeredInCloud.gameObject;
-        objectFull = triggerManager.triggerInCloudToObjectFull[colliderTriggeredInCloud];
+        GameObject objectToInstanciate = triggerManager.triggerInCloudToObjectFull[colliderTriggeredInCloud];
+        objectFull = Instantiate(objectToInstanciate, objectToInstanciate.transform.parent);
 
         cloud.SetActive(false);
         objectFull.SetActive(true);
@@ -82,7 +83,7 @@ public class DetectCloudObject : MonoBehaviour
                 objectFull.transform.rotation = Quaternion.Slerp(lerpStart.rotation, lerpEnd.localRotation, speed);
             }
 
-            if (Vector3.Distance(objectFull.transform.position, lerpEnd.position) < Mathf.Epsilon)
+            if (Vector3.Distance(objectFull.transform.position, lerpEnd.position) < 0.001f)
                 lerpObject = false;
         }
     }
@@ -112,30 +113,39 @@ public class DetectCloudObject : MonoBehaviour
     //Do the action of the object
     IEnumerator objectAction(Trap trap)
     {
-        yield return new WaitForSeconds(speed);
+        yield return new WaitUntil(() => lerpObject == false);
 
         if (objectCloud.tag == "Fruit")
         {
             if(life.lifeState < 4)
             {
-                life.lifeState += 1;
+                life.lifeState++;
             }
         }
         else
         {
-            switch (trap.type)
+            if(objectFull.name.Contains(trap.solvingObject.name))
             {
-                case TrapType.Destroy:
-                    trap.trapObject.SetActive(false);
-                    break;
+                Debug.Log("Bon objet");
+                switch (trap.type)
+                {
+                    case TrapType.Destroy:
+                        trap.trapObject.SetActive(false);
+                        break;
 
-                case TrapType.Open:
-                    //TODO : Open
-                    break;
+                    case TrapType.Open:
+                        //TODO : Open
+                        break;
 
-                case TrapType.Place:
-                    //TODO : désactiver les dégats du piège
-                    break;
+                    case TrapType.Place:
+                        //TODO : désactiver les dégats du piège
+                        break;
+                }
+            }
+            else
+            {
+                //Perdre des hp
+                Debug.Log("loose hp");
             }
         }
     }
