@@ -1464,7 +1464,6 @@ GameObject:
   m_Component:
   - component: {fileID: 587457481}
   - component: {fileID: 587457480}
-  - component: {fileID: 587457482}
   - component: {fileID: 587457484}
   - component: {fileID: 587457483}
   m_Layer: 0
@@ -1562,23 +1561,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &587457482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587457479}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dc24a8c613f85d4e8de1a2286f33a3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1321204014}
-  leftJoystick: {fileID: 751886871}
-  controller: {fileID: 1321204018}
-  speed: 0.0001
-  moveDir: {x: 0, y: 0, z: 0}
 --- !u!114 &587457483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3397,7 +3379,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321204014}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.045, y: 0.045, z: 0.045}
@@ -3416,7 +3398,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 3
 --- !u!114 &1321204017
 MonoBehaviour:
@@ -3431,26 +3413,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: {fileID: 587457483}
-  CharacterController: {fileID: 1321204018}
---- !u!143 &1321204018
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321204014}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Height: 0.1
-  m_Radius: 0.03
-  m_SlopeLimit: 0.045
-  m_StepOffset: 0.0003
-  m_SkinWidth: 0.0008
-  m_MinMoveDistance: 0.00001
-  m_Center: {x: 0, y: 0.05, z: 0}
---- !u!114 &1321204019
+  rb: {fileID: 1321204016}
+  speed: 0.001
+--- !u!114 &1321204018
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3459,26 +3424,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1321204014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87e5ca46cb35ca74789090bd68a64493, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dc24a8c613f85d4e8de1a2286f33a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   leftJoystick: {fileID: 751886871}
-  speed: 1
+  speed: 0.005
   player: {fileID: 1321204016}
---- !u!136 &1321204020
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321204014}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.02
-  m_Height: 0.101
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.047236722, z: 0}
 --- !u!1 &1414590059
 GameObject:
   m_ObjectHideFlags: 0
@@ -6066,7 +6017,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7225, y: 0.110583335}
   m_AnchorMax: {x: 0.9262501, y: 0.25650004}
-  m_AnchoredPosition: {x: 1.5, y: -0.5399933}
+  m_AnchoredPosition: {x: 1.5, y: -0.539978}
   m_SizeDelta: {x: -3, y: 3.0800018}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2124273730

@@ -13,8 +13,11 @@ public class CharacterManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 direction = -Vector3.right * leftJoystick.Vertical + Vector3.forward * leftJoystick.Horizontal;
-        transform.rotation = Quaternion.LookRotation(direction);
-        player.AddForce(direction * speed * Time.fixedDeltaTime);
+        if(leftJoystick.Vertical != 0 && leftJoystick.Horizontal != 0)
+        {
+            Vector3 direction = -Vector3.right * leftJoystick.Vertical + Vector3.forward * leftJoystick.Horizontal;
+            transform.rotation = Quaternion.LookRotation(direction);
+            player.MovePosition(player.position + direction * speed * Time.fixedDeltaTime);
+        }
     }
 }

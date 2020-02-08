@@ -5,14 +5,15 @@ using UnityEngine;
 public class CollisionWithPeaks : MonoBehaviour
 {
     [SerializeField] private LifeScript life;
-    [SerializeField] private CharacterController CharacterController;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private float speed;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Damage")
         {
             life.looseLife();
-            CharacterController.Move(new Vector3(0, 0, -0.01f));
+            rb.MovePosition(rb.position + Vector3.back * speed);
         }
     }
 }
