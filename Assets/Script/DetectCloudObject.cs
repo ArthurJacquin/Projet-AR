@@ -25,6 +25,8 @@ public class DetectCloudObject : MonoBehaviour
     private Transform lerpStart;
     private Transform lerpEnd;
 
+    [SerializeField] public LifeScript life;
+    
     private void Start()
     {
         triggerManager = TriggerManager.instance;
@@ -114,7 +116,10 @@ public class DetectCloudObject : MonoBehaviour
 
         if (objectCloud.tag == "Fruit")
         {
-            //TODO : heal player
+            if(life.lifeState < 4)
+            {
+                life.lifeState += 1;
+            }
         }
         else
         {
