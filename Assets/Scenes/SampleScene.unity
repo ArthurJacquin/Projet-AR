@@ -355,85 +355,34 @@ Transform:
   m_Father: {fileID: 422362936}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: -90}
---- !u!1 &214197785
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+--- !u!21 &222692209
+Material:
   serializedVersion: 6
-  m_Component:
-  - component: {fileID: 214197786}
-  - component: {fileID: 214197788}
-  - component: {fileID: 214197787}
-  m_Layer: 0
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &214197786
-RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214197785}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2124273729}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &214197787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214197785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'CLOUD !
+  m_Name: 'MarkerMaterial
 
-'
---- !u!222 &214197788
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214197785}
-  m_CullTransparentMesh: 0
+    14534'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 59e1e51785eeb0d448e69dd156c21eca, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1001 &242134513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -611,6 +560,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5161212684719104522, guid: 182f0b06fbdfab94691394345c0ab6c4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a507d7782a15a784287355f31af5c972, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 182f0b06fbdfab94691394345c0ab6c4, type: 3}
 --- !u!4 &242417425 stripped
@@ -653,7 +607,6 @@ Transform:
   - {fileID: 778013984}
   - {fileID: 2012515819}
   - {fileID: 242417425}
-  - {fileID: 1973371457}
   m_Father: {fileID: 1890407159}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1362,6 +1315,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 587457484}
+        m_MethodName: restartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &508148403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1501,6 +1465,8 @@ GameObject:
   - component: {fileID: 587457481}
   - component: {fileID: 587457480}
   - component: {fileID: 587457482}
+  - component: {fileID: 587457484}
+  - component: {fileID: 587457483}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -1603,7 +1569,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587457479}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1dc24a8c613f85d4e8de1a2286f33a3c, type: 3}
   m_Name: 
@@ -1611,8 +1577,42 @@ MonoBehaviour:
   player: {fileID: 1321204014}
   leftJoystick: {fileID: 751886871}
   controller: {fileID: 1321204018}
-  speed: 0.00001
+  speed: 0.0001
   moveDir: {x: 0, y: 0, z: 0}
+--- !u!114 &587457483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587457479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184bf44fe7361524da11da8e8a715842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeState: 3
+  lifeUi1: {fileID: 1891324817}
+  lifeUi2: {fileID: 636536489}
+  lifeUi3: {fileID: 771286109}
+  lifeUi4: {fileID: 477195767}
+  gameOverUI: {fileID: 438729808}
+  replayUI: {fileID: 508148400}
+  gameOversound: {fileID: 50861882}
+  LooseLifesound: {fileID: 1188673979}
+  GainLifesound: {fileID: 1090514596}
+--- !u!114 &587457484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587457479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a21af2b52a135764e8cb64e174a21d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &635805710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2825,169 +2825,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 60.607647, y: 1, z: 1}
   m_Center: {x: -29.803831, y: 0, z: 0}
---- !u!43 &1139136792
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: ImageTargetMesh14178
-  serializedVersion: 10
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 6
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 4
-    localAABB:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.5}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000001000200020001000300
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 4
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 128
-    _typelessdata: 000000bf00000000000000bf000000000000803f000000000000000000000000000000bf000000000000003f000000000000803f00000000000000000000803f0000003f00000000000000bf000000000000803f000000000000803f000000000000003f000000000000003f000000000000803f000000000000803f0000803f
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.5, y: 0, z: 0.5}
-  m_MeshUsageFlags: 0
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &1165250184
 GameObject:
   m_ObjectHideFlags: 0
@@ -3128,34 +2965,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165250184}
   m_CullTransparentMesh: 0
---- !u!21 &1169181028
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'MarkerMaterial
-
-    14188'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 59e1e51785eeb0d448e69dd156c21eca, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1188673977
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,7 +3222,7 @@ MonoBehaviour:
   CloudButton: {fileID: 2124273728}
   character: {fileID: 1321204014}
   cloud: {fileID: 416119803}
-  life: {fileID: 1973371458}
+  life: {fileID: 0}
 --- !u!54 &1216897690
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3605,10 +3414,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!114 &1321204017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3621,7 +3430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414798253f6d8864398606b595688d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: {fileID: 1973371458}
+  life: {fileID: 587457483}
   CharacterController: {fileID: 1321204018}
 --- !u!143 &1321204018
 CharacterController:
@@ -3632,7 +3441,7 @@ CharacterController:
   m_GameObject: {fileID: 1321204014}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 0.1
   m_Radius: 0.03
@@ -3641,85 +3450,35 @@ CharacterController:
   m_SkinWidth: 0.0008
   m_MinMoveDistance: 0.00001
   m_Center: {x: 0, y: 0.05, z: 0}
---- !u!1 &1390130288
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1390130289}
-  - component: {fileID: 1390130291}
-  - component: {fileID: 1390130290}
-  m_Layer: 0
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1390130289
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390130288}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1640491875}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1390130290
+--- !u!114 &1321204019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390130288}
+  m_GameObject: {fileID: 1321204014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: 87e5ca46cb35ca74789090bd68a64493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'USE !
-
-'
---- !u!222 &1390130291
-CanvasRenderer:
+  leftJoystick: {fileID: 751886871}
+  speed: 1
+  player: {fileID: 1321204016}
+--- !u!136 &1321204020
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390130288}
-  m_CullTransparentMesh: 0
+  m_GameObject: {fileID: 1321204014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.02
+  m_Height: 0.101
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.047236722, z: 0}
 --- !u!1 &1414590059
 GameObject:
   m_ObjectHideFlags: 0
@@ -4304,15 +4063,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1390130289}
+  m_Children: []
   m_Father: {fileID: 402350786}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7225, y: 0.18783334}
+  m_AnchorMin: {x: 0.7225, y: 0.110583335}
   m_AnchorMax: {x: 0.9262501, y: 0.25650004}
-  m_AnchoredPosition: {x: 1.5, y: 2.5}
-  m_SizeDelta: {x: -3, y: -3}
+  m_AnchoredPosition: {x: 1.5, y: -0.5}
+  m_SizeDelta: {x: -3, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1640491876
 MonoBehaviour:
@@ -4397,8 +4155,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 67b960e813c980647b289c795d58f7d3, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5056,6 +4814,169 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1781663924}
   m_PrefabAsset: {fileID: 0}
+--- !u!43 &1788677558
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ImageTargetMesh14524
+  serializedVersion: 10
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 6
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 4
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0, z: 0.5}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000001000200020001000300
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 4
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 128
+    _typelessdata: 000000bf00000000000000bf000000000000803f000000000000000000000000000000bf000000000000003f000000000000803f00000000000000000000803f0000003f00000000000000bf000000000000803f000000000000803f000000000000003f000000000000003f000000000000803f000000000000803f0000803f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5, y: 0, z: 0.5}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &1825720237
 GameObject:
   m_ObjectHideFlags: 0
@@ -5157,7 +5078,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890407153}
-  m_Mesh: {fileID: 1139136792}
+  m_Mesh: {fileID: 1788677558}
 --- !u!23 &1890407155
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5176,7 +5097,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1169181028}
+  - {fileID: 222692209}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5562,59 +5483,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1957051978}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1973371456
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1973371457}
-  - component: {fileID: 1973371458}
-  m_Layer: 0
-  m_Name: LifeManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1973371457
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973371456}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 355988195}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1973371458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973371456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 184bf44fe7361524da11da8e8a715842, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeState: 3
-  lifeUi1: {fileID: 1891324817}
-  lifeUi2: {fileID: 636536489}
-  lifeUi3: {fileID: 771286109}
-  lifeUi4: {fileID: 477195767}
-  gameOverUI: {fileID: 438729808}
-  replayUI: {fileID: 508148400}
-  gameOversound: {fileID: 50861882}
-  LooseLifesound: {fileID: 1188673979}
-  GainLifesound: {fileID: 1090514596}
 --- !u!224 &1994534726 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2929252285020697096, guid: aaa2c939c0359ac4dbce3f49e8b90252,
@@ -6192,15 +6060,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 214197786}
+  m_Children: []
   m_Father: {fileID: 402350786}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7225, y: 0.18783334}
+  m_AnchorMin: {x: 0.7225, y: 0.110583335}
   m_AnchorMax: {x: 0.9262501, y: 0.25650004}
-  m_AnchoredPosition: {x: 1.5, y: 2.5}
-  m_SizeDelta: {x: -3, y: -3}
+  m_AnchoredPosition: {x: 1.5, y: -0.5399933}
+  m_SizeDelta: {x: -3, y: 3.0800018}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2124273730
 MonoBehaviour:
@@ -6285,8 +6152,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: ac05074446942f04e8a3edce7b5d612f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -7467,6 +7334,7 @@ GameObject:
   - component: {fileID: 1459408231988481663}
   - component: {fileID: 1459408231985057375}
   - component: {fileID: 1459408231986187423}
+  - component: {fileID: 1459408231988449888}
   m_Layer: 0
   m_Name: Pillar_Stone (52)
   m_TagString: Untagged
@@ -7474,6 +7342,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408231988449888
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408231988449887}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084176654, y: 0.95696115, z: 0.0008412599}
 --- !u!4 &1459408231988481663
 Transform:
   m_ObjectHideFlags: 0
@@ -7592,6 +7473,7 @@ GameObject:
   - component: {fileID: 1459408231992759562}
   - component: {fileID: 1459408231989368106}
   - component: {fileID: 1459408231990335466}
+  - component: {fileID: 1459408231992527147}
   m_Layer: 0
   m_Name: Pillar_Stone (28)
   m_TagString: Untagged
@@ -7599,6 +7481,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408231992527147
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408231992527146}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084090227, y: 0.95696115, z: 0.0008388757}
 --- !u!4 &1459408231992759562
 Transform:
   m_ObjectHideFlags: 0
@@ -8089,6 +7984,7 @@ GameObject:
   - component: {fileID: 1459408232049596004}
   - component: {fileID: 1459408232050890308}
   - component: {fileID: 1459408232052020356}
+  - component: {fileID: 1459408232050018885}
   m_Layer: 0
   m_Name: Pillar_Stone (51)
   m_TagString: Untagged
@@ -8096,6 +7992,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232050018885
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232050018884}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008416175, y: 0.95696115, z: 0.0008412599}
 --- !u!33 &1459408232050890308
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8168,6 +8077,7 @@ GameObject:
   - component: {fileID: 1459408232052256918}
   - component: {fileID: 1459408232055648438}
   - component: {fileID: 1459408232054551158}
+  - component: {fileID: 1459408232052616375}
   m_Layer: 0
   m_Name: Pillar_Stone (47)
   m_TagString: Untagged
@@ -8175,6 +8085,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232052616375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232052616374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.00084075326}
 --- !u!23 &1459408232054551158
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8233,6 +8156,7 @@ GameObject:
   - component: {fileID: 1459408232057710768}
   - component: {fileID: 1459408232058513552}
   - component: {fileID: 1459408232059611728}
+  - component: {fileID: 1459408232057615505}
   m_Layer: 0
   m_Name: Pillar_Stone (56)
   m_TagString: Untagged
@@ -8240,6 +8164,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232057615505
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232057615504}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008416175, y: 0.95696115, z: 0.0008412599}
 --- !u!4 &1459408232057710768
 Transform:
   m_ObjectHideFlags: 0
@@ -8795,6 +8732,7 @@ GameObject:
   - component: {fileID: 1459408232091465864}
   - component: {fileID: 1459408232092268712}
   - component: {fileID: 1459408232093235816}
+  - component: {fileID: 1459408232090969257}
   m_Layer: 0
   m_Name: Pillar_Stone (42)
   m_TagString: Untagged
@@ -8802,6 +8740,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232090969257
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232090969256}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.0008412599}
 --- !u!4 &1459408232091465864
 Transform:
   m_ObjectHideFlags: 0
@@ -9014,6 +8965,7 @@ GameObject:
   - component: {fileID: 1459408232105417540}
   - component: {fileID: 1459408232104123236}
   - component: {fileID: 1459408232103123364}
+  - component: {fileID: 1459408232105314149}
   m_Layer: 0
   m_Name: Pillar_Stone (23)
   m_TagString: Untagged
@@ -9021,6 +8973,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232105314149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232105314148}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084090227, y: 0.95696115, z: 0.00084173674}
 --- !u!4 &1459408232105417540
 Transform:
   m_ObjectHideFlags: 0
@@ -9559,6 +9524,7 @@ GameObject:
   - component: {fileID: 1459408232145917690}
   - component: {fileID: 1459408232146720474}
   - component: {fileID: 1459408232147817498}
+  - component: {fileID: 1459408232145554139}
   m_Layer: 0
   m_Name: Pillar_Stone (10)
   m_TagString: Untagged
@@ -9566,6 +9532,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232145554139
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232145554138}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.0008412599}
 --- !u!4 &1459408232145917690
 Transform:
   m_ObjectHideFlags: 0
@@ -10648,6 +10627,7 @@ GameObject:
   - component: {fileID: 1459408232213175089}
   - component: {fileID: 1459408232214469393}
   - component: {fileID: 1459408232215599569}
+  - component: {fileID: 1459408232213595922}
   m_Layer: 0
   m_Name: Pillar_Stone (14)
   m_TagString: Untagged
@@ -10655,6 +10635,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232213595922
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232213595921}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.0008412599}
 --- !u!33 &1459408232214469393
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10866,6 +10859,7 @@ GameObject:
   - component: {fileID: 1459408232233682811}
   - component: {fileID: 1459408232234977115}
   - component: {fileID: 1459408232235976091}
+  - component: {fileID: 1459408232233982812}
   m_Layer: 0
   m_Name: Pillar_Stone (32)
   m_TagString: Untagged
@@ -10873,6 +10867,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232233982812
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232233982811}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.00084078306}
 --- !u!33 &1459408232234977115
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11211,6 +11218,7 @@ GameObject:
   - component: {fileID: 1459408232252515242}
   - component: {fileID: 1459408232249648010}
   - component: {fileID: 1459408232250614090}
+  - component: {fileID: 1459408232252882827}
   m_Layer: 0
   m_Name: Pillar_Stone (81)
   m_TagString: Untagged
@@ -11218,6 +11226,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232252882827
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232252882826}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008428096, y: 0.95696115, z: 0.00084173674}
 --- !u!23 &1459408232253498059
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11394,6 +11415,7 @@ GameObject:
   - component: {fileID: 1459408232255922219}
   - component: {fileID: 1459408232254627851}
   - component: {fileID: 1459408232253498059}
+  - component: {fileID: 1459408232255765516}
   m_Layer: 0
   m_Name: Pillar_Stone (55)
   m_TagString: Untagged
@@ -11401,6 +11423,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232255765516
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232255765515}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008416175, y: 0.95696115, z: 0.00084078306}
 --- !u!4 &1459408232255922219
 Transform:
   m_ObjectHideFlags: 0
@@ -11886,6 +11921,7 @@ GameObject:
   - component: {fileID: 1459408232299510760}
   - component: {fileID: 1459408232296119240}
   - component: {fileID: 1459408232297216264}
+  - component: {fileID: 1459408232299210697}
   m_Layer: 0
   m_Name: Pillar_Stone (45)
   m_TagString: Untagged
@@ -11893,6 +11929,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232299210697
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232299210696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.0008412599}
 --- !u!4 &1459408232299510760
 Transform:
   m_ObjectHideFlags: 0
@@ -12979,6 +13028,7 @@ GameObject:
   - component: {fileID: 1459408232377473636}
   - component: {fileID: 1459408232376670788}
   - component: {fileID: 1459408232375572612}
+  - component: {fileID: 1459408232377501253}
   m_Layer: 0
   m_Name: Pillar_Stone (75)
   m_TagString: Untagged
@@ -12986,6 +13036,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232377501253
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232377501252}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008416175, y: 0.95696115, z: 0.00084078306}
 --- !u!23 &1459408232377816114
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13137,6 +13200,7 @@ GameObject:
   - component: {fileID: 1459408232381690156}
   - component: {fileID: 1459408232380395788}
   - component: {fileID: 1459408232379397068}
+  - component: {fileID: 1459408232381656333}
   m_Layer: 0
   m_Name: Pillar_Stone (66)
   m_TagString: Untagged
@@ -13144,6 +13208,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232381656333
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232381656332}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.0008403062}
 --- !u!4 &1459408232381690156
 Transform:
   m_ObjectHideFlags: 0
@@ -13728,6 +13805,7 @@ GameObject:
   - component: {fileID: 1459408232407927677}
   - component: {fileID: 1459408232404536157}
   - component: {fileID: 1459408232405633437}
+  - component: {fileID: 1459408232407832414}
   m_Layer: 0
   m_Name: Pillar_Stone (53)
   m_TagString: Untagged
@@ -13735,6 +13813,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232407832414
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232407832413}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084197515, y: 0.95696115, z: 0.0008412599}
 --- !u!4 &1459408232407927677
 Transform:
   m_ObjectHideFlags: 0
@@ -13760,6 +13851,7 @@ GameObject:
   - component: {fileID: 1459408232408492612}
   - component: {fileID: 1459408232405101156}
   - component: {fileID: 1459408232406067364}
+  - component: {fileID: 1459408232408331877}
   m_Layer: 0
   m_Name: Pillar_Stone (74)
   m_TagString: Untagged
@@ -13767,6 +13859,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232408331877
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232408331876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008416175, y: 0.95696115, z: 0.0008403062}
 --- !u!4 &1459408232408492612
 Transform:
   m_ObjectHideFlags: 0
@@ -13839,6 +13944,7 @@ GameObject:
   - component: {fileID: 1459408232411630594}
   - component: {fileID: 1459408232410336290}
   - component: {fileID: 1459408232409206498}
+  - component: {fileID: 1459408232411467811}
   m_Layer: 0
   m_Name: Pillar_Stone (61)
   m_TagString: Untagged
@@ -13846,6 +13952,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232411467811
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232411467810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.00084078306}
 --- !u!4 &1459408232411630594
 Transform:
   m_ObjectHideFlags: 0
@@ -13978,6 +14097,7 @@ GameObject:
   - component: {fileID: 1459408232414603751}
   - component: {fileID: 1459408232415898055}
   - component: {fileID: 1459408232417028871}
+  - component: {fileID: 1459408232414836168}
   m_Layer: 0
   m_Name: Pillar_Stone (20)
   m_TagString: Untagged
@@ -13985,6 +14105,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232414836168
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232414836167}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084090227, y: 0.95696115, z: 0.00084173674}
 --- !u!4 &1459408232415001993
 Transform:
   m_ObjectHideFlags: 0
@@ -14291,6 +14424,7 @@ GameObject:
   - component: {fileID: 1459408232430738776}
   - component: {fileID: 1459408232432065912}
   - component: {fileID: 1459408232433164216}
+  - component: {fileID: 1459408232431157625}
   m_Layer: 0
   m_Name: Pillar_Stone (71)
   m_TagString: Untagged
@@ -14298,6 +14432,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232431157625
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232431157624}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.0008412599}
 --- !u!33 &1459408232432065912
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14417,6 +14564,7 @@ GameObject:
   - component: {fileID: 1459408232433952206}
   - component: {fileID: 1459408232437376494}
   - component: {fileID: 1459408232436246318}
+  - component: {fileID: 1459408232434252271}
   m_Layer: 0
   m_Name: Pillar_Stone (57)
   m_TagString: Untagged
@@ -14424,6 +14572,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232434252271
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232434252270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084179634, y: 0.95696115, z: 0.0008412599}
 --- !u!65 &1459408232434406592
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14762,6 +14923,7 @@ GameObject:
   - component: {fileID: 1459408232441006497}
   - component: {fileID: 1459408232439679361}
   - component: {fileID: 1459408232438582081}
+  - component: {fileID: 1459408232440845698}
   m_Layer: 0
   m_Name: Pillar_Stone (62)
   m_TagString: Untagged
@@ -14769,6 +14931,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232440845698
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232440845697}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.00084173674}
 --- !u!65 &1459408232440855739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15012,6 +15187,7 @@ GameObject:
   - component: {fileID: 1459408232453121571}
   - component: {fileID: 1459408232451827203}
   - component: {fileID: 1459408232450827459}
+  - component: {fileID: 1459408232452831748}
   m_Layer: 0
   m_Name: Pillar_Stone (33)
   m_TagString: Untagged
@@ -15019,6 +15195,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232452831748
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232452831747}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084182614, y: 0.95696115, z: 0.0008398294}
 --- !u!4 &1459408232453121571
 Transform:
   m_ObjectHideFlags: 0
@@ -15152,6 +15341,7 @@ GameObject:
   - component: {fileID: 1459408232458103970}
   - component: {fileID: 1459408232455236738}
   - component: {fileID: 1459408232456334914}
+  - component: {fileID: 1459408232458334339}
   m_Layer: 0
   m_Name: Pillar_Stone (37)
   m_TagString: Untagged
@@ -15159,6 +15349,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232458334339
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232458334338}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084182614, y: 0.95696115, z: 0.0008398294}
 --- !u!33 &1459408232463902905
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16428,6 +16631,7 @@ GameObject:
   - component: {fileID: 1459408232520393101}
   - component: {fileID: 1459408232519623085}
   - component: {fileID: 1459408232518624109}
+  - component: {fileID: 1459408232520826286}
   m_Layer: 0
   m_Name: Pillar_Stone (60)
   m_TagString: Untagged
@@ -16435,6 +16639,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232520826286
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232520826285}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.0008412599}
 --- !u!64 &1459408232529800582
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16540,6 +16757,7 @@ GameObject:
   - component: {fileID: 1459408232547961656}
   - component: {fileID: 1459408232550828824}
   - component: {fileID: 1459408232549730776}
+  - component: {fileID: 1459408232547800857}
   m_Layer: 0
   m_Name: Pillar_Stone (34)
   m_TagString: Untagged
@@ -16547,6 +16765,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232547800857
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232547800856}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.0008398294}
 --- !u!4 &1459408232547961656
 Transform:
   m_ObjectHideFlags: 0
@@ -16806,6 +17037,7 @@ GameObject:
   - component: {fileID: 1459408232587399270}
   - component: {fileID: 1459408232586104902}
   - component: {fileID: 1459408232584974982}
+  - component: {fileID: 1459408232586972231}
   m_Layer: 0
   m_Name: Pillar_Stone (86)
   m_TagString: Untagged
@@ -16813,6 +17045,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232586972231
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232586972230}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.00084090227}
 --- !u!4 &1459408232587399270
 Transform:
   m_ObjectHideFlags: 0
@@ -17542,6 +17787,7 @@ GameObject:
   - component: {fileID: 1459408232619533112}
   - component: {fileID: 1459408232620827416}
   - component: {fileID: 1459408232621826520}
+  - component: {fileID: 1459408232619900697}
   m_Layer: 0
   m_Name: Pillar_Stone (19)
   m_TagString: Untagged
@@ -17549,6 +17795,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232619900697
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232619900696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.0008426904}
 --- !u!33 &1459408232620827416
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -17826,6 +18085,7 @@ GameObject:
   - component: {fileID: 1459408232643368265}
   - component: {fileID: 1459408232639976809}
   - component: {fileID: 1459408232640944041}
+  - component: {fileID: 1459408232643201386}
   m_Layer: 0
   m_Name: Pillar_Stone (59)
   m_TagString: Untagged
@@ -17833,6 +18093,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232643201386
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232643201385}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084197515, y: 0.95696115, z: 0.00084078306}
 --- !u!4 &1459408232643368265
 Transform:
   m_ObjectHideFlags: 0
@@ -18077,6 +18350,7 @@ GameObject:
   - component: {fileID: 1459408232668075425}
   - component: {fileID: 1459408232664683905}
   - component: {fileID: 1459408232665782081}
+  - component: {fileID: 1459408232667777410}
   m_Layer: 0
   m_Name: Pillar_Stone (49)
   m_TagString: Untagged
@@ -18084,6 +18358,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232667777410
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232667777409}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.0008410215}
 --- !u!4 &1459408232668075425
 Transform:
   m_ObjectHideFlags: 0
@@ -18313,6 +18600,7 @@ GameObject:
   - component: {fileID: 1459408232700143619}
   - component: {fileID: 1459408232700913699}
   - component: {fileID: 1459408232701913827}
+  - component: {fileID: 1459408232699720740}
   m_Layer: 0
   m_Name: Pillar_Stone (87)
   m_TagString: Untagged
@@ -18320,6 +18608,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232699720740
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232699720739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084179634, y: 0.95696115, z: 0.00084078306}
 --- !u!4 &1459408232700143619
 Transform:
   m_ObjectHideFlags: 0
@@ -18579,6 +18880,7 @@ GameObject:
   - component: {fileID: 1459408232738182903}
   - component: {fileID: 1459408232737380055}
   - component: {fileID: 1459408232736281623}
+  - component: {fileID: 1459408232738212568}
   m_Layer: 0
   m_Name: Pillar_Stone (24)
   m_TagString: Untagged
@@ -18586,6 +18888,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232738212568
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232738212567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084090227, y: 0.95696115, z: 0.00084173674}
 --- !u!33 &1459408232753197020
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18849,6 +19164,7 @@ GameObject:
   - component: {fileID: 1459408232767038820}
   - component: {fileID: 1459408232767841604}
   - component: {fileID: 1459408232768939908}
+  - component: {fileID: 1459408232767011141}
   m_Layer: 0
   m_Name: Pillar_Stone (36)
   m_TagString: Untagged
@@ -18856,6 +19172,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232767011141
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232767011140}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.00084078306}
 --- !u!4 &1459408232767038820
 Transform:
   m_ObjectHideFlags: 0
@@ -19035,6 +19364,7 @@ GameObject:
   - component: {fileID: 1459408232783340653}
   - component: {fileID: 1459408232784110669}
   - component: {fileID: 1459408232785241741}
+  - component: {fileID: 1459408232783247438}
   m_Layer: 0
   m_Name: Pillar_Stone (26)
   m_TagString: Untagged
@@ -19042,6 +19372,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232783247438
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232783247437}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084185594, y: 0.95696115, z: 0.00084078306}
 --- !u!4 &1459408232783340653
 Transform:
   m_ObjectHideFlags: 0
@@ -19114,6 +19457,7 @@ GameObject:
   - component: {fileID: 1459408232786495354}
   - component: {fileID: 1459408232789395290}
   - component: {fileID: 1459408232788264346}
+  - component: {fileID: 1459408232786336603}
   m_Layer: 0
   m_Name: Pillar_Stone (64)
   m_TagString: Untagged
@@ -19121,6 +19465,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232786336603
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232786336602}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084185594, y: 0.95696115, z: 0.00084173674}
 --- !u!4 &1459408232786495354
 Transform:
   m_ObjectHideFlags: 0
@@ -19486,6 +19843,7 @@ GameObject:
   - component: {fileID: 1459408232802975356}
   - component: {fileID: 1459408232806366812}
   - component: {fileID: 1459408232805399708}
+  - component: {fileID: 1459408232803459677}
   m_Layer: 0
   m_Name: Pillar_Stone (6)
   m_TagString: Untagged
@@ -19493,6 +19851,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232803459677
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232803459676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084090227, y: 0.95696115, z: 0.0008412599}
 --- !u!23 &1459408232805399708
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19612,6 +19983,7 @@ GameObject:
   - component: {fileID: 1459408232809467869}
   - component: {fileID: 1459408232808697853}
   - component: {fileID: 1459408232807566653}
+  - component: {fileID: 1459408232809501694}
   m_Layer: 0
   m_Name: Pillar_Stone (13)
   m_TagString: Untagged
@@ -19619,6 +19991,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232809501694
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232809501693}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.0008412599}
 --- !u!1 &1459408232816593829
 GameObject:
   m_ObjectHideFlags: 0
@@ -19803,6 +20188,7 @@ GameObject:
   - component: {fileID: 1459408232820075357}
   - component: {fileID: 1459408232822942589}
   - component: {fileID: 1459408232821844413}
+  - component: {fileID: 1459408232819914622}
   m_Layer: 0
   m_Name: Pillar_Stone (3)
   m_TagString: Untagged
@@ -19810,6 +20196,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232819914622
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232819914621}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084090227, y: 0.95696115, z: 0.00084173674}
 --- !u!4 &1459408232820075357
 Transform:
   m_ObjectHideFlags: 0
@@ -20177,6 +20576,7 @@ GameObject:
   - component: {fileID: 1459408232830451233}
   - component: {fileID: 1459408232829681153}
   - component: {fileID: 1459408232828550337}
+  - component: {fileID: 1459408232830476802}
   m_Layer: 0
   m_Name: Pillar_Stone (31)
   m_TagString: Untagged
@@ -20184,6 +20584,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232830476802
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232830476801}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.00084078306}
 --- !u!1 &1459408232830750799
 GameObject:
   m_ObjectHideFlags: 0
@@ -20426,6 +20839,7 @@ GameObject:
   - component: {fileID: 1459408232862732850}
   - component: {fileID: 1459408232864027154}
   - component: {fileID: 1459408232865157330}
+  - component: {fileID: 1459408232863223315}
   m_Layer: 0
   m_Name: Pillar_Stone (17)
   m_TagString: Untagged
@@ -20433,6 +20847,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232863223315
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232863223314}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084090227, y: 0.95696115, z: 0.00084173674}
 --- !u!33 &1459408232864027154
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20737,6 +21164,7 @@ GameObject:
   - component: {fileID: 1459408232888526715}
   - component: {fileID: 1459408232889821019}
   - component: {fileID: 1459408232890819995}
+  - component: {fileID: 1459408232888826716}
   m_Layer: 0
   m_Name: Pillar_Stone (72)
   m_TagString: Untagged
@@ -20744,6 +21172,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232888826716
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232888826715}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.00084078306}
 --- !u!33 &1459408232889821019
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20896,6 +21337,7 @@ GameObject:
   - component: {fileID: 1459408232915575752}
   - component: {fileID: 1459408232912184296}
   - component: {fileID: 1459408232913281320}
+  - component: {fileID: 1459408232915222505}
   m_Layer: 0
   m_Name: Pillar_Stone (58)
   m_TagString: Untagged
@@ -20903,6 +21345,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232915222505
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232915222504}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084197515, y: 0.95696115, z: 0.0008412599}
 --- !u!4 &1459408232915575752
 Transform:
   m_ObjectHideFlags: 0
@@ -21161,6 +21616,7 @@ GameObject:
   - component: {fileID: 1459408232965093640}
   - component: {fileID: 1459408232964323624}
   - component: {fileID: 1459408232963324904}
+  - component: {fileID: 1459408232965317929}
   m_Layer: 0
   m_Name: Pillar_Stone (68)
   m_TagString: Untagged
@@ -21168,6 +21624,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232965317929
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232965317928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.00084078306}
 --- !u!1 &1459408232966572646
 GameObject:
   m_ObjectHideFlags: 0
@@ -21179,6 +21648,7 @@ GameObject:
   - component: {fileID: 1459408232967001670}
   - component: {fileID: 1459408232969868902}
   - component: {fileID: 1459408232968770726}
+  - component: {fileID: 1459408232966572647}
   m_Layer: 0
   m_Name: Pillar_Stone (46)
   m_TagString: Untagged
@@ -21186,6 +21656,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232966572647
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232966572646}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.00084075326}
 --- !u!4 &1459408232967001670
 Transform:
   m_ObjectHideFlags: 0
@@ -21258,6 +21741,7 @@ GameObject:
   - component: {fileID: 1459408232981036815}
   - component: {fileID: 1459408232981806895}
   - component: {fileID: 1459408232982805999}
+  - component: {fileID: 1459408232980865840}
   m_Layer: 0
   m_Name: Pillar_Stone (8)
   m_TagString: Untagged
@@ -21265,6 +21749,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232980865840
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232980865839}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084090227, y: 0.95696115, z: 0.00084075326}
 --- !u!4 &1459408232981036815
 Transform:
   m_ObjectHideFlags: 0
@@ -23263,6 +23760,7 @@ GameObject:
   - component: {fileID: 1459408233143070241}
   - component: {fileID: 1459408233145937409}
   - component: {fileID: 1459408233144839361}
+  - component: {fileID: 1459408233142841858}
   m_Layer: 0
   m_Name: Pillar_Stone (48)
   m_TagString: Untagged
@@ -23270,6 +23768,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233142841858
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233142841857}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.0008410215}
 --- !u!4 &1459408233143070241
 Transform:
   m_ObjectHideFlags: 0
@@ -23356,6 +23867,7 @@ GameObject:
   - component: {fileID: 1459408233155846931}
   - component: {fileID: 1459408233159238451}
   - component: {fileID: 1459408233158271475}
+  - component: {fileID: 1459408233156280116}
   m_Layer: 0
   m_Name: Pillar_Stone (12)
   m_TagString: Untagged
@@ -23363,6 +23875,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233156280116
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233156280115}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.00084075326}
 --- !u!23 &1459408233158271475
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23779,6 +24304,7 @@ GameObject:
   - component: {fileID: 1459408233178826653}
   - component: {fileID: 1459408233177532349}
   - component: {fileID: 1459408233176401277}
+  - component: {fileID: 1459408233178340286}
   m_Layer: 0
   m_Name: Pillar_Stone (27)
   m_TagString: Untagged
@@ -23786,6 +24312,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233178340286
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233178340285}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084090227, y: 0.95696115, z: 0.0008398294}
 --- !u!4 &1459408233178826653
 Transform:
   m_ObjectHideFlags: 0
@@ -23966,6 +24505,7 @@ GameObject:
   - component: {fileID: 1459408233182644813}
   - component: {fileID: 1459408233181842029}
   - component: {fileID: 1459408233180743853}
+  - component: {fileID: 1459408233182942830}
   m_Layer: 0
   m_Name: Pillar_Stone (77)
   m_TagString: Untagged
@@ -23973,6 +24513,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233182942830
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233182942829}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008437633, y: 0.95696115, z: 0.00084078306}
 --- !u!65 &1459408233183729744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24402,6 +24955,7 @@ GameObject:
   - component: {fileID: 1459408233226716947}
   - component: {fileID: 1459408233230108467}
   - component: {fileID: 1459408233229141491}
+  - component: {fileID: 1459408233226951476}
   m_Layer: 0
   m_Name: Pillar_Stone (41)
   m_TagString: Untagged
@@ -24409,6 +24963,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233226951476
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233226951475}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.0008426904}
 --- !u!4 &1459408233227817343
 Transform:
   m_ObjectHideFlags: 0
@@ -24732,6 +25299,7 @@ GameObject:
   - component: {fileID: 1459408233235881848}
   - component: {fileID: 1459408233238781784}
   - component: {fileID: 1459408233237781912}
+  - component: {fileID: 1459408233235579737}
   m_Layer: 0
   m_Name: Pillar_Stone (21)
   m_TagString: Untagged
@@ -24739,6 +25307,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233235579737
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233235579736}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084090227, y: 0.95696115, z: 0.00084173674}
 --- !u!4 &1459408233235881848
 Transform:
   m_ObjectHideFlags: 0
@@ -24811,6 +25392,7 @@ GameObject:
   - component: {fileID: 1459408233240019977}
   - component: {fileID: 1459408233242887209}
   - component: {fileID: 1459408233241790185}
+  - component: {fileID: 1459408233239861290}
   m_Layer: 0
   m_Name: Pillar_Stone (18)
   m_TagString: Untagged
@@ -24818,6 +25400,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233239861290
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233239861289}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084090227, y: 0.95696115, z: 0.0008426904}
 --- !u!4 &1459408233240019977
 Transform:
   m_ObjectHideFlags: 0
@@ -24951,6 +25546,7 @@ GameObject:
   - component: {fileID: 1459408233251158426}
   - component: {fileID: 1459408233247766970}
   - component: {fileID: 1459408233248734074}
+  - component: {fileID: 1459408233250727355}
   m_Layer: 0
   m_Name: Pillar_Stone (54)
   m_TagString: Untagged
@@ -24958,6 +25554,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233250727355
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233250727354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084197515, y: 0.95696115, z: 0.00084173674}
 --- !u!4 &1459408233251158426
 Transform:
   m_ObjectHideFlags: 0
@@ -25119,6 +25728,7 @@ GameObject:
   - component: {fileID: 1459408233273374614}
   - component: {fileID: 1459408233276798902}
   - component: {fileID: 1459408233275798902}
+  - component: {fileID: 1459408233273600951}
   m_Layer: 0
   m_Name: Pillar_Stone (78)
   m_TagString: Untagged
@@ -25126,6 +25736,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233273600951
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233273600950}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.9569614, z: 0.00084173674}
 --- !u!33 &1459408233274247651
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -25285,6 +25908,7 @@ GameObject:
   - component: {fileID: 1459408233291999320}
   - component: {fileID: 1459408233290672248}
   - component: {fileID: 1459408233289706168}
+  - component: {fileID: 1459408233291707513}
   m_Layer: 0
   m_Name: Pillar_Stone (65)
   m_TagString: Untagged
@@ -25292,6 +25916,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233291707513
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233291707512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008437633, y: 0.95696115, z: 0.0008403062}
 --- !u!4 &1459408233291999320
 Transform:
   m_ObjectHideFlags: 0
@@ -25331,6 +25968,7 @@ GameObject:
   - component: {fileID: 1459408233312131189}
   - component: {fileID: 1459408233313458261}
   - component: {fileID: 1459408233314425493}
+  - component: {fileID: 1459408233312420950}
   m_Layer: 0
   m_Name: Pillar_Stone (29)
   m_TagString: Untagged
@@ -25338,6 +25976,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233312420950
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233312420949}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.00084078306}
 --- !u!33 &1459408233313458261
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -25689,6 +26340,7 @@ GameObject:
   - component: {fileID: 1459408233356661238}
   - component: {fileID: 1459408233360085462}
   - component: {fileID: 1459408233358955286}
+  - component: {fileID: 1459408233357020631}
   m_Layer: 0
   m_Name: Pillar_Stone
   m_TagString: Untagged
@@ -25696,6 +26348,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233357020631
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233357020630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084090227, y: 0.95696115, z: 0.00084173674}
 --- !u!23 &1459408233358955286
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26678,6 +27343,7 @@ GameObject:
   - component: {fileID: 1459408233419497225}
   - component: {fileID: 1459408233416073001}
   - component: {fileID: 1459408233417072105}
+  - component: {fileID: 1459408233418998570}
   m_Layer: 0
   m_Name: Pillar_Stone (15)
   m_TagString: Untagged
@@ -26685,6 +27351,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233418998570
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233418998569}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084185594, y: 0.95696115, z: 0.0008398294}
 --- !u!23 &1459408233419414460
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27089,6 +27768,7 @@ GameObject:
   - component: {fileID: 1459408233448467210}
   - component: {fileID: 1459408233445567274}
   - component: {fileID: 1459408233446566378}
+  - component: {fileID: 1459408233448765227}
   m_Layer: 0
   m_Name: Pillar_Stone (40)
   m_TagString: Untagged
@@ -27096,6 +27776,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233448765227
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233448765226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008437633, y: 0.95696115, z: 0.0008398294}
 --- !u!33 &1459408233448877009
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28097,6 +28790,7 @@ GameObject:
   - component: {fileID: 1459408233504092328}
   - component: {fileID: 1459408233507516552}
   - component: {fileID: 1459408233506517576}
+  - component: {fileID: 1459408233504255113}
   m_Layer: 0
   m_Name: Pillar_Stone (67)
   m_TagString: Untagged
@@ -28104,6 +28798,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233504255113
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233504255112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.0008403062}
 --- !u!23 &1459408233504609355
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28232,6 +28939,7 @@ GameObject:
   - component: {fileID: 1459408233507034795}
   - component: {fileID: 1459408233503643275}
   - component: {fileID: 1459408233504609355}
+  - component: {fileID: 1459408233506540172}
   m_Layer: 0
   m_Name: Pillar_Stone (5)
   m_TagString: Untagged
@@ -28239,6 +28947,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233506540172
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233506540171}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084185594, y: 0.95696115, z: 0.00084173674}
 --- !u!33 &1459408233506690528
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28481,6 +29202,7 @@ GameObject:
   - component: {fileID: 1459408233518268952}
   - component: {fileID: 1459408233517498936}
   - component: {fileID: 1459408233516368120}
+  - component: {fileID: 1459408233518374457}
   m_Layer: 0
   m_Name: Pillar_Stone (84)
   m_TagString: Untagged
@@ -28488,6 +29210,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233518374457
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233518374456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008428096, y: 0.95696115, z: 0.00084078306}
 --- !u!4 &1459408233518676404
 Transform:
   m_ObjectHideFlags: 0
@@ -28513,6 +29248,7 @@ GameObject:
   - component: {fileID: 1459408233518676404}
   - component: {fileID: 1459408233517906324}
   - component: {fileID: 1459408233516776276}
+  - component: {fileID: 1459408233519031701}
   m_Layer: 0
   m_Name: Pillar_Stone (80)
   m_TagString: Untagged
@@ -28520,6 +29256,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233519031701
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233519031700}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.0008426904}
 --- !u!33 &1459408233520581916
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28770,6 +29519,7 @@ GameObject:
   - component: {fileID: 1459408233532849862}
   - component: {fileID: 1459408233536241382}
   - component: {fileID: 1459408233535142950}
+  - component: {fileID: 1459408233533203175}
   m_Layer: 0
   m_Name: Pillar_Stone (43)
   m_TagString: Untagged
@@ -28777,6 +29527,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233533203175
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233533203174}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.0008426904}
 --- !u!33 &1459408233533953760
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28785,45 +29548,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459408233534950112}
   m_Mesh: {fileID: 4300000, guid: 401e70dad0e27154891bdf3770690a32, type: 3}
---- !u!65 &1459408233534852163
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459408233534950112}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.32452285, y: 0.8955935, z: 0.5016718}
-  m_Center: {x: 0.0033812523, y: 0.44779676, z: -0.7136135}
---- !u!65 &1459408233534852164
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459408233534950112}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.32452285, y: 0.90012455, z: 0.5301013}
-  m_Center: {x: 0.0033812523, y: 0.45006227, z: 0.72565055}
---- !u!65 &1459408233534852165
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459408233534950112}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.32452285, y: 0.5489836, z: 1.9551506}
-  m_Center: {x: 0.0033812523, y: 1.1699135, z: 0.013125896}
 --- !u!1 &1459408233534950112
 GameObject:
   m_ObjectHideFlags: 0
@@ -28835,9 +29559,6 @@ GameObject:
   - component: {fileID: 1459408233535248064}
   - component: {fileID: 1459408233533953760}
   - component: {fileID: 1459408233532953632}
-  - component: {fileID: 1459408233534852164}
-  - component: {fileID: 1459408233534852165}
-  - component: {fileID: 1459408233534852163}
   m_Layer: 0
   m_Name: Wall_Stone_Doorway
   m_TagString: Untagged
@@ -29382,6 +30103,7 @@ GameObject:
   - component: {fileID: 1459408233596322611}
   - component: {fileID: 1459408233599746835}
   - component: {fileID: 1459408233598747091}
+  - component: {fileID: 1459408233596559124}
   m_Layer: 0
   m_Name: Pillar_Stone (82)
   m_TagString: Untagged
@@ -29389,6 +30111,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233596559124
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233596559123}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.9569613, z: 0.0008426904}
 --- !u!23 &1459408233598747091
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29554,6 +30289,7 @@ GameObject:
   - component: {fileID: 1459408233605731582}
   - component: {fileID: 1459408233607058654}
   - component: {fileID: 1459408233608025630}
+  - component: {fileID: 1459408233606023391}
   m_Layer: 0
   m_Name: Pillar_Stone (70)
   m_TagString: Untagged
@@ -29561,6 +30297,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233606023391
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233606023390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.00084078306}
 --- !u!33 &1459408233607058654
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29773,6 +30522,7 @@ GameObject:
   - component: {fileID: 1459408233616294620}
   - component: {fileID: 1459408233613394684}
   - component: {fileID: 1459408233614524476}
+  - component: {fileID: 1459408233616465661}
   m_Layer: 0
   m_Name: Pillar_Stone (73)
   m_TagString: Untagged
@@ -29780,6 +30530,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233616465661
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233616465660}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.00084078306}
 --- !u!23 &1459408233617149161
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29852,6 +30615,7 @@ GameObject:
   - component: {fileID: 1459408233618918921}
   - component: {fileID: 1459408233618116137}
   - component: {fileID: 1459408233617149161}
+  - component: {fileID: 1459408233619083818}
   m_Layer: 0
   m_Name: Pillar_Stone (35)
   m_TagString: Untagged
@@ -29859,6 +30623,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233619083818
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233619083817}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.0008398294}
 --- !u!1 &1459408233620870029
 GameObject:
   m_ObjectHideFlags: 0
@@ -30009,6 +30786,7 @@ GameObject:
   - component: {fileID: 1459408233631162883}
   - component: {fileID: 1459408233631965731}
   - component: {fileID: 1459408233632932067}
+  - component: {fileID: 1459408233630940708}
   m_Layer: 0
   m_Name: Pillar_Stone (16)
   m_TagString: Untagged
@@ -30016,6 +30794,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233630940708
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233630940707}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084090227, y: 0.95696115, z: 0.00084173674}
 --- !u!4 &1459408233631162883
 Transform:
   m_ObjectHideFlags: 0
@@ -30508,6 +31299,7 @@ GameObject:
   - component: {fileID: 1459408233672596981}
   - component: {fileID: 1459408233673366997}
   - component: {fileID: 1459408233674366741}
+  - component: {fileID: 1459408233672360406}
   m_Layer: 0
   m_Name: Pillar_Stone (63)
   m_TagString: Untagged
@@ -30515,6 +31307,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233672360406
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233672360405}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008428096, y: 0.95696115, z: 0.00084173674}
 --- !u!4 &1459408233672596981
 Transform:
   m_ObjectHideFlags: 0
@@ -30634,6 +31439,7 @@ GameObject:
   - component: {fileID: 1459408233682692523}
   - component: {fileID: 1459408233681365387}
   - component: {fileID: 1459408233680268107}
+  - component: {fileID: 1459408233682204044}
   m_Layer: 0
   m_Name: Pillar_Stone (50)
   m_TagString: Untagged
@@ -30641,6 +31447,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233682204044
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233682204043}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008416175, y: 0.95696115, z: 0.00084173674}
 --- !u!4 &1459408233682692523
 Transform:
   m_ObjectHideFlags: 0
@@ -31618,6 +32437,7 @@ GameObject:
   - component: {fileID: 1459408233714220867}
   - component: {fileID: 1459408233715515235}
   - component: {fileID: 1459408233716645283}
+  - component: {fileID: 1459408233714639716}
   m_Layer: 0
   m_Name: Pillar_Stone (83)
   m_TagString: Untagged
@@ -31625,6 +32445,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233714639716
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233714639715}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008428096, y: 0.95696115, z: 0.00084173674}
 --- !u!23 &1459408233715012102
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31968,6 +32801,7 @@ GameObject:
   - component: {fileID: 1459408233730489248}
   - component: {fileID: 1459408233733913472}
   - component: {fileID: 1459408233732782400}
+  - component: {fileID: 1459408233730844545}
   m_Layer: 0
   m_Name: Pillar_Stone (30)
   m_TagString: Untagged
@@ -31975,6 +32809,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233730844545
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233730844544}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.0008398294}
 --- !u!1 &1459408233730955330
 GameObject:
   m_ObjectHideFlags: 0
@@ -31986,6 +32833,7 @@ GameObject:
   - component: {fileID: 1459408233731441762}
   - component: {fileID: 1459408233732211778}
   - component: {fileID: 1459408233733211778}
+  - component: {fileID: 1459408233730955331}
   m_Layer: 0
   m_Name: Pillar_Stone (79)
   m_TagString: Untagged
@@ -31993,6 +32841,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233730955331
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233730955330}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008428096, y: 0.95696115, z: 0.0008403062}
 --- !u!4 &1459408233731441762
 Transform:
   m_ObjectHideFlags: 0
@@ -32623,6 +33484,7 @@ GameObject:
   - component: {fileID: 1459408233752886829}
   - component: {fileID: 1459408233753656845}
   - component: {fileID: 1459408233754787021}
+  - component: {fileID: 1459408233752519182}
   m_Layer: 0
   m_Name: Pillar_Stone (11)
   m_TagString: Untagged
@@ -32630,6 +33492,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233752519182
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233752519181}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.00084075326}
 --- !u!4 &1459408233752886829
 Transform:
   m_ObjectHideFlags: 0
@@ -33093,6 +33968,7 @@ GameObject:
   - component: {fileID: 1459408233786454933}
   - component: {fileID: 1459408233787257781}
   - component: {fileID: 1459408233788223861}
+  - component: {fileID: 1459408233786027958}
   m_Layer: 0
   m_Name: Pillar_Stone (88)
   m_TagString: Untagged
@@ -33100,6 +33976,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233786027958
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233786027957}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.0008410215}
 --- !u!4 &1459408233786454933
 Transform:
   m_ObjectHideFlags: 0
@@ -33172,6 +34061,7 @@ GameObject:
   - component: {fileID: 1459408233790620307}
   - component: {fileID: 1459408233791390387}
   - component: {fileID: 1459408233792520307}
+  - component: {fileID: 1459408233790267060}
   m_Layer: 0
   m_Name: Pillar_Stone (44)
   m_TagString: Untagged
@@ -33179,6 +34069,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233790267060
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233790267059}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008437633, y: 0.95696115, z: 0.0008426904}
 --- !u!4 &1459408233790620307
 Transform:
   m_ObjectHideFlags: 0
@@ -33344,6 +34247,7 @@ GameObject:
   - component: {fileID: 1459408233805811266}
   - component: {fileID: 1459408233808711266}
   - component: {fileID: 1459408233807711394}
+  - component: {fileID: 1459408233805451875}
   m_Layer: 0
   m_Name: Pillar_Stone (38)
   m_TagString: Untagged
@@ -33351,6 +34255,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233805451875
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233805451874}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084182614, y: 0.95696115, z: 0.00084078306}
 --- !u!4 &1459408233805811266
 Transform:
   m_ObjectHideFlags: 0
@@ -33767,6 +34684,7 @@ GameObject:
   - component: {fileID: 1459408233865502038}
   - component: {fileID: 1459408233866272118}
   - component: {fileID: 1459408233867272118}
+  - component: {fileID: 1459408233865331063}
   m_Layer: 0
   m_Name: Pillar_Stone (76)
   m_TagString: Untagged
@@ -33774,6 +34692,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233865331063
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233865331062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008413791, y: 0.95696115, z: 0.0008398294}
 --- !u!4 &1459408233865502038
 Transform:
   m_ObjectHideFlags: 0
@@ -34172,6 +35103,7 @@ GameObject:
   - component: {fileID: 1459408233908310785}
   - component: {fileID: 1459408233907540769}
   - component: {fileID: 1459408233906541025}
+  - component: {fileID: 1459408233908473634}
   m_Layer: 0
   m_Name: Pillar_Stone (7)
   m_TagString: Untagged
@@ -34179,6 +35111,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233908473634
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233908473633}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084185594, y: 0.95696115, z: 0.00084090227}
 --- !u!23 &1459408233915307988
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34251,6 +35196,7 @@ GameObject:
   - component: {fileID: 1459408233917076788}
   - component: {fileID: 1459408233916273940}
   - component: {fileID: 1459408233915307988}
+  - component: {fileID: 1459408233917565205}
   m_Layer: 0
   m_Name: Pillar_Stone (22)
   m_TagString: Untagged
@@ -34258,6 +35204,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233917565205
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233917565204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084090227, y: 0.95696115, z: 0.00084173674}
 --- !u!23 &1459408233919513531
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34754,6 +35713,7 @@ GameObject:
   - component: {fileID: 1459408233956302615}
   - component: {fileID: 1459408233952878391}
   - component: {fileID: 1459408233954008567}
+  - component: {fileID: 1459408233955935032}
   m_Layer: 0
   m_Name: Pillar_Stone (39)
   m_TagString: Untagged
@@ -34761,6 +35721,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233955935032
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233955935031}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.0008398294}
 --- !u!4 &1459408233956302615
 Transform:
   m_ObjectHideFlags: 0
@@ -35131,6 +36104,7 @@ GameObject:
   - component: {fileID: 1459408233978689091}
   - component: {fileID: 1459408233979459171}
   - component: {fileID: 1459408233980589219}
+  - component: {fileID: 1459408233978653284}
   m_Layer: 0
   m_Name: Pillar_Stone (85)
   m_TagString: Untagged
@@ -35138,6 +36112,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233978653284
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233978653283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008428096, y: 0.95696115, z: 0.00084078306}
 --- !u!4 &1459408233978689091
 Transform:
   m_ObjectHideFlags: 0
@@ -35224,6 +36211,7 @@ GameObject:
   - component: {fileID: 1459408233991553896}
   - component: {fileID: 1459408233992848200}
   - component: {fileID: 1459408233993978248}
+  - component: {fileID: 1459408233991987017}
   m_Layer: 0
   m_Name: Pillar_Stone (9)
   m_TagString: Untagged
@@ -35231,6 +36219,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408233991987017
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408233991987016}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084185594, y: 0.95696115, z: 0.00084078306}
 --- !u!33 &1459408233992848200
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -36316,6 +37317,7 @@ GameObject:
   - component: {fileID: 1459408234082838680}
   - component: {fileID: 1459408234086262968}
   - component: {fileID: 1459408234085132920}
+  - component: {fileID: 1459408234083136697}
   m_Layer: 0
   m_Name: Pillar_Stone (25)
   m_TagString: Untagged
@@ -36323,6 +37325,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408234083136697
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408234083136696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084090227, y: 0.95696115, z: 0.0008398294}
 --- !u!23 &1459408234085132920
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36521,6 +37536,7 @@ GameObject:
   - component: {fileID: 1459408234090468079}
   - component: {fileID: 1459408234087076559}
   - component: {fileID: 1459408234088173583}
+  - component: {fileID: 1459408234090172112}
   m_Layer: 0
   m_Name: Pillar_Stone (69)
   m_TagString: Untagged
@@ -36528,6 +37544,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408234090172112
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408234090172111}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.00084078306}
 --- !u!4 &1459408234090468079
 Transform:
   m_ObjectHideFlags: 0
@@ -43493,6 +44522,7 @@ GameObject:
   - component: {fileID: 5152566442864692103}
   - component: {fileID: 5152566442867559335}
   - component: {fileID: 5152566442866592103}
+  - component: {fileID: 5152566442864662440}
   m_Layer: 0
   m_Name: Pillar_Stone (92)
   m_TagString: Untagged
@@ -43500,6 +44530,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &5152566442864662440
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152566442864662439}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.0008412599}
 --- !u!4 &5152566442864692103
 Transform:
   m_ObjectHideFlags: 0
@@ -50431,6 +51474,7 @@ GameObject:
   - component: {fileID: 7812403306993321086}
   - component: {fileID: 7812403306992026718}
   - component: {fileID: 7812403306991027870}
+  - component: {fileID: 7812403306993227871}
   m_Layer: 0
   m_Name: Pillar_Stone (90)
   m_TagString: Untagged
@@ -50438,6 +51482,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7812403306993227871
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812403306993227870}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084197515, y: 0.95696115, z: 0.0008412599}
 --- !u!4 &7812403306993321086
 Transform:
   m_ObjectHideFlags: 0
@@ -51187,6 +52244,7 @@ GameObject:
   - component: {fileID: 8839914372868513012}
   - component: {fileID: 8839914372865645780}
   - component: {fileID: 8839914372866743828}
+  - component: {fileID: 8839914372868669653}
   m_Layer: 0
   m_Name: Pillar_Stone (89)
   m_TagString: Untagged
@@ -51194,6 +52252,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8839914372868669653
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8839914372868669652}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.0008416175, y: 0.95696115, z: 0.0008412599}
 --- !u!108 &8862655146509852652
 Light:
   m_ObjectHideFlags: 0
@@ -51294,6 +52365,7 @@ GameObject:
   - component: {fileID: 9063237711573402484}
   - component: {fileID: 9063237711576793940}
   - component: {fileID: 9063237711575695764}
+  - component: {fileID: 9063237711573704533}
   m_Layer: 0
   m_Name: Pillar_Stone (91)
   m_TagString: Untagged
@@ -51301,6 +52373,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &9063237711573704533
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9063237711573704532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
+  m_Center: {x: -0.00084176654, y: 0.95696115, z: 0.0008412599}
 --- !u!23 &9063237711575695764
 MeshRenderer:
   m_ObjectHideFlags: 0
