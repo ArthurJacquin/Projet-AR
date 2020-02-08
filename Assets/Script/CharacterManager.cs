@@ -15,7 +15,7 @@ public class CharacterManager : MonoBehaviour
     {
         if(leftJoystick.Vertical != 0 && leftJoystick.Horizontal != 0)
         {
-            Vector3 direction = -Vector3.right * leftJoystick.Vertical + Vector3.forward * leftJoystick.Horizontal;
+            Vector3 direction = new Vector3(Camera.main.transform.forward.x, 0, Camera.main.transform.forward.z).normalized * leftJoystick.Vertical + new Vector3(Camera.main.transform.right.x, 0, Camera.main.transform.right.z).normalized * leftJoystick.Horizontal;
             transform.rotation = Quaternion.LookRotation(direction);
             player.MovePosition(player.position + direction * speed * Time.fixedDeltaTime);
         }
