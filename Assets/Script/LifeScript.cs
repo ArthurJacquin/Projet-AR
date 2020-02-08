@@ -15,9 +15,10 @@ public class LifeScript : MonoBehaviour
     [SerializeField] private AudioSource gameOversound;
     [SerializeField] private AudioSource LooseLifesound;
     [SerializeField] private AudioSource GainLifesound;
+    [SerializeField] private Animator anim;
 
     private bool inLife = true;
-    /*
+    
     private void Update()
     {
         if (Input.GetKeyDown("space"))
@@ -33,12 +34,13 @@ public class LifeScript : MonoBehaviour
             print("gainLife");
             Debug.Log(lifeState);
         }
-    }*/
+    }
 
     public void looseLife()
     {
         lifeState -= 1;
         LooseLifesound.Play();
+        anim.Play("Damage");
 
         if (lifeState >= 1)
         {
@@ -73,6 +75,7 @@ public class LifeScript : MonoBehaviour
         {
             lifeState += 1;
             GainLifesound.Play();
+            anim.Play("Eat");
             
             if (lifeState >= 4)
             {
@@ -97,6 +100,7 @@ public class LifeScript : MonoBehaviour
     {
         if (inLife == false)
         {
+            anim.Play("Dying");
             gameOverUI.SetActive(true);
             gameOversound.Play();
             replayUI.SetActive(true);

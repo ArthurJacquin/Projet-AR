@@ -8,9 +8,11 @@ public class Victory : MonoBehaviour
     [SerializeField] private GameObject victoryUI;
     [SerializeField] private GameObject replayButton;
     [SerializeField] private AudioSource victorySound;
+    [SerializeField] private Animator victoryanim;
 
     private void OnTriggerEnter(Collider other)
     {
+        victoryanim.Play("Victory");
         victoryUI.SetActive(true);
         replayButton.SetActive(true);
         victorySound.Play();
