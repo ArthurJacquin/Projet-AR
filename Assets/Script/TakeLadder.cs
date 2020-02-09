@@ -52,32 +52,32 @@ public class TakeLadder : MonoBehaviour
 
         else if (col == 2)
         {
-            player.transform.localPosition = new Vector3(0.9f, 0.265f, -1.45f);
-            player.transform.rotation = Quaternion.LookRotation(Vector3.forward);
-            player.transform.GetChild(0).rotation = Quaternion.LookRotation(Vector3.forward);
+            player.transform.localPosition = new Vector3(0.895f, 0.265f, -1.424f);
+            player.transform.rotation = Quaternion.LookRotation(-Vector3.forward);
+            player.transform.GetChild(0).rotation = Quaternion.LookRotation(-Vector3.forward);
             anim.speed = 2f;
             anim.Play("ClimbingBack");
 
             yield return new WaitForSeconds(time);
             anim.Play("Idle");
             playerAnimator.transform.localPosition = new Vector3(0f, 0f, 0f);
-            player.transform.localPosition = new Vector3(0.88f, 0.115f, -1.35f);
+            player.transform.localPosition = new Vector3(0.892f, 0.115f, -1.296f);
             player.transform.rotation = Quaternion.LookRotation(-Vector3.forward);
             player.transform.GetChild(0).rotation = Quaternion.LookRotation(-Vector3.forward);
         }
         else if (col == 4)
         {
             player.transform.localPosition = new Vector3(0.675f, 0.1097f, -1.538f);
-            player.transform.rotation = Quaternion.LookRotation(-Vector3.right);
-            player.transform.GetChild(0).rotation = Quaternion.LookRotation(-Vector3.right);
+            player.transform.rotation = Quaternion.LookRotation(Vector3.right);
+            player.transform.GetChild(0).rotation = Quaternion.LookRotation(Vector3.right);
             anim.speed = 2f;
             anim.Play("Climbing");
             yield return new WaitForSeconds(time);
             anim.Play("Idle");
             playerAnimator.transform.localPosition = new Vector3(0f, 0f, 0f);
             player.transform.localPosition = new Vector3(0.846f, 0.2621f, -1.5353f);
-            player.transform.rotation = Quaternion.LookRotation(-Vector3.right);
-            player.transform.GetChild(0).rotation = Quaternion.LookRotation(-Vector3.right);
+            player.transform.rotation = Quaternion.LookRotation(Vector3.right);
+            player.transform.GetChild(0).rotation = Quaternion.LookRotation(Vector3.right);
         }
 
     }
