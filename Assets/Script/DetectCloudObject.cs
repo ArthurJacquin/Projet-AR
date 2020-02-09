@@ -139,6 +139,7 @@ public class DetectCloudObject : MonoBehaviour
                     case TrapType.PlaceAndDisable:
                         trap.trapObject.GetComponent<BoxCollider>().enabled = false;
                         break;
+
                     case TrapType.Place:
                         trap.trapObject.gameObject.SetActive(true);
                         break;
