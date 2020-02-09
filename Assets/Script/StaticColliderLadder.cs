@@ -10,10 +10,11 @@ public class StaticColliderLadder : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         useButton.SetActive(true);
-        col = col;
+        TakeLadder.col = col;
     }
     public void OnTriggerExit(Collider other)
     {
         useButton.SetActive(false);
+        col = 0;
     }
 }

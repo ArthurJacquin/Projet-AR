@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 63646185}
   - component: {fileID: 63646184}
   - component: {fileID: 63646183}
+  - component: {fileID: 63646186}
   m_Layer: 0
   m_Name: UseFruitButton
   m_TagString: Untagged
@@ -351,6 +352,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 63646186}
+        m_MethodName: UseChest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &63646184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,6 +399,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63646181}
   m_CullTransparentMesh: 0
+--- !u!114 &63646186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63646181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec9bcfd50ad0ddb4cb75824495ad7a74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &68130567
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useFruitButton: {fileID: 63646181}
+  fruit: {fileID: 1461061433970669717}
 --- !u!1 &133423810
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,6 +819,12 @@ PrefabInstance:
 --- !u!4 &242417425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5161212684501343275, guid: 182f0b06fbdfab94691394345c0ab6c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 242417424}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &242417426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5161212684707606384, guid: 182f0b06fbdfab94691394345c0ab6c4,
     type: 3}
   m_PrefabInstance: {fileID: 242417424}
   m_PrefabAsset: {fileID: 0}
@@ -3342,6 +3373,7 @@ GameObject:
   - component: {fileID: 1073306009}
   - component: {fileID: 1073306008}
   - component: {fileID: 1073306007}
+  - component: {fileID: 1073306010}
   m_Layer: 0
   m_Name: UseLadderButton
   m_TagString: Untagged
@@ -3411,20 +3443,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1655878967}
+      - m_Target: {fileID: 1073306010}
         m_MethodName: climbLadder
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1073306005}
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3469,6 +3490,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073306005}
   m_CullTransparentMesh: 0
+--- !u!114 &1073306010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073306005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4981b9f6e4c8ec8458ede78dd232c6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1182034236}
+  player: {fileID: 1321204014}
+  playerAnimator: {fileID: 242417426}
 --- !u!1 &1090514594
 GameObject:
   m_ObjectHideFlags: 0
@@ -4584,10 +4620,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1368934234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4981b9f6e4c8ec8458ede78dd232c6d5, type: 3}
+  m_Script: {fileID: 11500000, guid: efa8cb22ce54c564fab38275b3ce4796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 1182034236}
+  col: 2
+  useButton: {fileID: 1073306005}
 --- !u!65 &1368934237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4642,10 +4679,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1379668596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4981b9f6e4c8ec8458ede78dd232c6d5, type: 3}
+  m_Script: {fileID: 11500000, guid: efa8cb22ce54c564fab38275b3ce4796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 1182034236}
+  col: 3
+  useButton: {fileID: 1073306005}
 --- !u!65 &1379668599
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5627,10 +5665,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1655878964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4981b9f6e4c8ec8458ede78dd232c6d5, type: 3}
+  m_Script: {fileID: 11500000, guid: efa8cb22ce54c564fab38275b3ce4796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 1182034236}
+  col: 1
+  useButton: {fileID: 1073306005}
 --- !u!1001 &1685138232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6496,10 +6535,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1920371746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4981b9f6e4c8ec8458ede78dd232c6d5, type: 3}
+  m_Script: {fileID: 11500000, guid: efa8cb22ce54c564fab38275b3ce4796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 1182034236}
+  col: 4
+  useButton: {fileID: 1073306005}
 --- !u!65 &1920371749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6865,6 +6905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useFruitButton: {fileID: 63646181}
+  fruit: {fileID: 1460756577866351444}
 --- !u!1 &2030549051
 GameObject:
   m_ObjectHideFlags: 0
@@ -7404,6 +7445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useFruitButton: {fileID: 63646181}
+  fruit: {fileID: 1460049546822614214}
 --- !u!1 &2124273728
 GameObject:
   m_ObjectHideFlags: 0
@@ -18599,20 +18641,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459408232590019847}
   m_Mesh: {fileID: 4300000, guid: 14184199719f5be45bf3d8b6fd16d568, type: 3}
---- !u!64 &1459408232594602358
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459408232600885206}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 9d15bb47597152f4b93bdcb9d0f4ff2b, type: 3}
 --- !u!33 &1459408232597883862
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18718,7 +18746,6 @@ GameObject:
   - component: {fileID: 1459408232600783862}
   - component: {fileID: 1459408232597883862}
   - component: {fileID: 1459408232598882582}
-  - component: {fileID: 1459408232594602358}
   m_Layer: 0
   m_Name: Basement_Passage_Prison (2)
   m_TagString: Untagged
@@ -32300,20 +32327,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551525}
   m_Center: {x: 0.00000047683716, y: 0.72169673, z: 0.0000005066395}
---- !u!64 &1459408233658946473
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459408233665248521}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 9d15bb47597152f4b93bdcb9d0f4ff2b, type: 3}
 --- !u!65 &1459408233659296471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32525,7 +32538,6 @@ GameObject:
   - component: {fileID: 1459408233665012009}
   - component: {fileID: 1459408233664241929}
   - component: {fileID: 1459408233663243209}
-  - component: {fileID: 1459408233658946473}
   m_Layer: 0
   m_Name: Basement_Passage_Prison (1)
   m_TagString: Untagged
@@ -45176,8 +45188,8 @@ Transform:
   - {fileID: 1459408234061587831}
   - {fileID: 1459408234051942330}
   - {fileID: 1459408232422335205}
-  - {fileID: 1300051550}
   - {fileID: 1303352459}
+  - {fileID: 1300051550}
   m_Father: {fileID: 1459408232600643213}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

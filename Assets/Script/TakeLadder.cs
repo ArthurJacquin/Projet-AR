@@ -5,8 +5,8 @@ using UnityEngine;
 public class TakeLadder : MonoBehaviour
 {
     [SerializeField] public Animator anim;
-    [SerializeField] static public GameObject player;
-    [SerializeField] static public GameObject playerAnimator;
+    [SerializeField]  public GameObject player;
+    [SerializeField]  public GameObject playerAnimator;
     static public int col;
     /*
     public void OnTriggerEnter(Collider other)
@@ -25,7 +25,7 @@ public class TakeLadder : MonoBehaviour
 
     private IEnumerator waitForAnim(float time)
     {
-        Debug.Log("in coroutine" + col);
+        //Debug.Log("in coroutine" + col);
         if (col == 1)
         {
             player.transform.localPosition = new Vector3(-0.8f, 0.115f, -0.27f);
@@ -42,16 +42,15 @@ public class TakeLadder : MonoBehaviour
         }
         else if (col == 3)
         {
-            Debug.Log("entered in 3");
             player.transform.localPosition = new Vector3(-0.646f, 0.259f, -0.061f);
-            player.transform.rotation = Quaternion.LookRotation(-Vector3.right);
-            anim.speed = -2f;
-            anim.Play("Climbing");
+            player.transform.rotation = Quaternion.LookRotation(Vector3.right);
+            anim.speed = 2f;
+            anim.Play("ClimbingBack");
 
             yield return new WaitForSeconds(time);
             playerAnimator.transform.localPosition = new Vector3(0f, 0f, 0f);
             player.transform.localPosition = new Vector3(-0.7946f, 0.115f, -0.0612f);
-            player.transform.rotation = Quaternion.LookRotation(-Vector3.right);
+            player.transform.rotation = Quaternion.LookRotation(Vector3.right);
             anim.Play("Idle");
         }
 
@@ -59,8 +58,8 @@ public class TakeLadder : MonoBehaviour
         {
             player.transform.localPosition = new Vector3(0.9f, 0.265f, -1.45f);
             player.transform.rotation = Quaternion.LookRotation(Vector3.forward);
-            anim.speed = -2f;
-            anim.Play("Climbing");
+            anim.speed = 2f;
+            anim.Play("ClimbingBack");
 
             yield return new WaitForSeconds(time);
             anim.Play("Idle");
@@ -71,8 +70,8 @@ public class TakeLadder : MonoBehaviour
         else if (col == 4)
         {
             player.transform.localPosition = new Vector3(0.675f, 0.1097f, -1.538f);
-            player.transform.rotation = Quaternion.LookRotation(Vector3.right);
-            anim.speed = -2f;
+            player.transform.rotation = Quaternion.LookRotation(-Vector3.right);
+            anim.speed = 2f;
             anim.Play("Climbing");
             yield return new WaitForSeconds(time);
             anim.Play("Idle");
