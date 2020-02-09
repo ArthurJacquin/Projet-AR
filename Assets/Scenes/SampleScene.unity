@@ -772,7 +772,7 @@ PrefabInstance:
     - target: {fileID: 5161212684501343275, guid: 182f0b06fbdfab94691394345c0ab6c4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5161212684501343275, guid: 182f0b06fbdfab94691394345c0ab6c4,
         type: 3}
@@ -1024,8 +1024,8 @@ Transform:
   - {fileID: 422362936}
   - {fileID: 778013984}
   - {fileID: 2012515819}
-  - {fileID: 242417425}
   - {fileID: 1692031749}
+  - {fileID: 242417425}
   - {fileID: 1655878965}
   - {fileID: 1368934235}
   - {fileID: 1920371747}
@@ -4636,8 +4636,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.79468817, y: 1.6833495, z: 1.4568186}
+  m_Center: {x: 0.10265633, y: -0.34167773, z: 0.2284072}
 --- !u!1 &1379668596
 GameObject:
   m_ObjectHideFlags: 0
@@ -4695,8 +4695,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.5722905, y: 0.99999595, z: 0.8518784}
+  m_Center: {x: -0.2861442, y: 0, z: 0.07406097}
 --- !u!1 &1414590059
 GameObject:
   m_ObjectHideFlags: 0
@@ -5286,7 +5286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.31500003, y: 0}
   m_AnchorMax: {x: 0.70750004, y: 0.317}
-  m_AnchoredPosition: {x: 0.69999695, y: 0.16000366}
+  m_AnchoredPosition: {x: 0.6999817, y: 0.16000366}
   m_SizeDelta: {x: 1.3999939, y: 0.32000732}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1617879672
@@ -5880,7 +5880,7 @@ Transform:
   - {fileID: 108812380}
   - {fileID: 2095775493}
   m_Father: {fileID: 355988195}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1712825287
 PrefabInstance:
@@ -6845,7 +6845,7 @@ MonoBehaviour:
   victoryUI: {fileID: 362233499}
   replayButton: {fileID: 508148400}
   victorySound: {fileID: 2067028496}
-  ambianceSound: {fileID: 0}
+  ambianceSound: {fileID: 891195161}
   victoryanim: {fileID: 1182034236}
 --- !u!1 &2027391719
 GameObject:
