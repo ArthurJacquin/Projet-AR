@@ -5,6 +5,7 @@ using UnityEngine;
 public enum TrapType
 {
     Place,
+    PlaceAndDisable,
     Open,
     Destroy
 }
