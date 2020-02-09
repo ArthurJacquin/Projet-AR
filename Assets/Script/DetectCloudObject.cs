@@ -140,7 +140,7 @@ public class DetectCloudObject : MonoBehaviour
                         trap.trapObject.GetComponent<BoxCollider>().enabled = false;
                         break;
                     case TrapType.Place:
-                        //Todo : activer l'interaction
+                        trap.trapObject.gameObject.SetActive(true);
                         break;
                 }
 
