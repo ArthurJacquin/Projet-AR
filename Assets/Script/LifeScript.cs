@@ -15,6 +15,7 @@ public class LifeScript : MonoBehaviour
     [SerializeField] private AudioSource gameOversound;
     [SerializeField] private AudioSource LooseLifesound;
     [SerializeField] private AudioSource GainLifesound;
+    [SerializeField] private AudioSource ambiancesound;
     [SerializeField] private Animator anim;
 
     private bool inLife = true;
@@ -39,8 +40,8 @@ public class LifeScript : MonoBehaviour
     public void looseLife()
     {
         lifeState -= 1;
-        LooseLifesound.Play();
         anim.Play("Damage");
+        LooseLifesound.Play();
 
         if (lifeState >= 1)
         {
@@ -100,6 +101,7 @@ public class LifeScript : MonoBehaviour
     {
         if (inLife == false)
         {
+            ambiancesound.Stop();
             anim.Play("Dying");
             gameOverUI.SetActive(true);
             gameOversound.Play();
