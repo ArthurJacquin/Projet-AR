@@ -20,7 +20,7 @@ public class DetectCloudObject : MonoBehaviour
     private TriggerManager triggerManager;
 
     private float scale = 2f;
-    private float speed = 0.006f;
+    private float speed = 0.05f;
     private bool lerpObject = false;
     private Transform lerpStart;
     private Transform lerpEnd;
