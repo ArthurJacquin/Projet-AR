@@ -13684,20 +13684,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551525}
   m_Center: {x: 0, y: 0.72169673, z: 0.0000003874302}
---- !u!64 &1459408232327224203
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459408232329327915}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 9d15bb47597152f4b93bdcb9d0f4ff2b, type: 3}
 --- !u!4 &1459408232329160971
 Transform:
   m_ObjectHideFlags: 0
@@ -13723,7 +13709,8 @@ GameObject:
   - component: {fileID: 1459408232329160971}
   - component: {fileID: 1459408232332585259}
   - component: {fileID: 1459408232331586539}
-  - component: {fileID: 1459408232327224203}
+  - component: {fileID: 1459408232329327917}
+  - component: {fileID: 1459408232329327916}
   m_Layer: 0
   m_Name: Basement_Passage_Prison
   m_TagString: Untagged
@@ -13731,6 +13718,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232329327916
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232329327915}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6685091, y: 0.1618211, z: 3.1632135}
+  m_Center: {x: 1.8271751, y: 0.00090895756, z: 1.5458126}
+--- !u!65 &1459408232329327917
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232329327915}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0491548, y: 0.1618211, z: 4.5434546}
+  m_Center: {x: -1.4754242, y: 0.00090895756, z: 0.8556975}
 --- !u!4 &1459408232329716092
 Transform:
   m_ObjectHideFlags: 0
@@ -18095,20 +18108,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.38535616, y: 1.911628, z: 0.38407728}
   m_Center: {x: -0.0008423328, y: 0.95696115, z: 0.0008412599}
---- !u!64 &1459408232529800582
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459408232531886886}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 7dc17e9f3a67d6e419d0c8c298690c5c, type: 3}
 --- !u!1 &1459408232531886886
 GameObject:
   m_ObjectHideFlags: 0
@@ -18120,7 +18119,7 @@ GameObject:
   - component: {fileID: 1459408232532385542}
   - component: {fileID: 1459408232533188390}
   - component: {fileID: 1459408232534154726}
-  - component: {fileID: 1459408232529800582}
+  - component: {fileID: 1459408232531886887}
   m_Layer: 0
   m_Name: Basement_Door_Right
   m_TagString: Untagged
@@ -18128,6 +18127,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1459408232531886887
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408232531886886}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.11419706, y: 2.1197004, z: 1.2976079}
+  m_Center: {x: 0.0000012561801, y: 0.11920531, z: -0.59342825}
 --- !u!4 &1459408232532385542
 Transform:
   m_ObjectHideFlags: 0
@@ -18135,13 +18147,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459408232531886886}
-  m_LocalRotation: {x: -0.50000006, y: 0.50000006, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 6.5787177, y: 2.3960533, z: 0.91191316}
-  m_LocalScale: {x: 47.92782, y: 47.92782, z: 47.92782}
+  m_LocalRotation: {x: -0, y: -0.0111553585, z: -0, w: 0.99993783}
+  m_LocalPosition: {x: 6.517, y: 2.424, z: 0.91191244}
+  m_LocalScale: {x: 0.49263, y: 0.49263, z: 0.49263}
   m_Children: []
   m_Father: {fileID: 4342987545798917931}
   m_RootOrder: 325
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 90.00001}
+  m_LocalEulerAnglesHint: {x: -180, y: -181.278, z: 180}
 --- !u!33 &1459408232533188390
 MeshFilter:
   m_ObjectHideFlags: 0
